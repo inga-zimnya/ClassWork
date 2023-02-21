@@ -7,8 +7,18 @@ public class Arrays {
         myList.add("123");
         myList.add(0, "345");
 
-        System.out.println(myList.get(0));
-        System.out.println(myList.get(1));
+        for (String el : myList) {
+            System.out.println(el);
+        }
 
+        //myList.remove(2);
+        ArrayList<String> myList2 = new ArrayList<>();
+        myList2.add("apple");
+        myList2.add("banana");
+
+        myList.addAll(myList2);
+        for (String el : myList) {
+            System.out.println(el);
+        }
     }
 }
