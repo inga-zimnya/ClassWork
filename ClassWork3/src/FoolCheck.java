@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -16,10 +18,29 @@ public class FoolCheck {
 
         try{
             int a = scan.nextInt();
+            throw new ArithmeticException();
+            //сами бросили exception
         }
-        catch (InputMismatchException e){
+        catch (ArithmeticException e){
             System.out.println("Введено не число");
         }
+        finally{
+            System.out.println("КОнец программы");
+        }
 
+        methodWithException();
+
+    }
+
+    public static void methodWithException() throws ArithmeticException{
+        throw new ArithmeticException();
+    }
+
+    public static void methodWithExcOfIO() throws IOException {
+        FileWriter a = new FileWriter("aka Programmer");
+    }
+
+    public static void methodWithAr() throws ArithmeticException{
+        throw new ArithmeticException();
     }
 }
