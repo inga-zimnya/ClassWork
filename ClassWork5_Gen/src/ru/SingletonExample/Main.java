@@ -10,7 +10,7 @@ public class Main {
         System.out.println(b.number);
 
         //возвращается только 1 Instance
-        
+
 
 
     }
