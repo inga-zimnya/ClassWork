@@ -1,4 +1,4 @@
-package org.example;
+package ru.xml;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;

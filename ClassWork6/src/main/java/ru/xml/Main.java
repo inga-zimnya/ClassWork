@@ -1,9 +1,8 @@
-package org.example;
+package ru.xml;
 
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 import javax.xml.stream.events.XMLEvent;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -16,6 +15,13 @@ public class Main {
                 if (event == XMLEvent.START_ELEMENT &&
                         "BREED".equals(reader.getLocalName())) {
                     System.out.println(reader.getElementText());
+                }
+                //проверяем, что это начальный элемент и тогда смотрим на содержимое
+                try{
+                    System.out.println(reader.getElementText());
+                }
+                catch (XMLStreamException e){
+                    System.out.println(e.getClass());
                 }
             }
         } catch (Exception e) {
