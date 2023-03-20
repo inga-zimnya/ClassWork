@@ -8,4 +8,5 @@ public class Main {
     public String returnStringWithNumber(int number){
         return "number " + number;
     }
+    public String returnStringWithNumber(int number1, int number2){ return "number " + number1 + number2;}
 }
